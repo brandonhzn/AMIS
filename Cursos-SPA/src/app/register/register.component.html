@@ -1,0 +1,67 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+  <h2 class="text-center text-primary">Registro</h2>
+  <hr>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "username" 
+    [(ngModel)]="model.username" placeholder="Nickname">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "nombres" 
+    [(ngModel)]="model.nombres" placeholder="Nombres">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "apellidos" 
+    [(ngModel)]="model.apellidos" placeholder="Apellidos">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "fechanacimiento" 
+    [(ngModel)]="model.fechanacimiento" placeholder="Fecha de Nacimiento">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "lugarnacimiento" 
+    [(ngModel)]="model.lugarnacimiento" placeholder="Lugar de Nacimiento">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "lugarresidencia" 
+    [(ngModel)]="model.lugarresidencia" placeholder="Lugar de Residencia" >
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "genero" 
+    [(ngModel)]="model.genero" placeholder="Genero" >
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" required name= "hobbies" 
+    [(ngModel)]="model.hobbies" placeholder="Hobbies">
+  </div>
+
+  <!--
+  <div class="from-group">
+    <label for="favouriteValue">What is your favorite value?</label>
+    <select class="form-control" id="favoriteValue" >
+      <option *ngFor="let value of valuesFromHome" [value]= "value" >{{value.name}}</option>
+    </select>
+
+  </div>
+  -->
+<div class="form-group">
+<input type="password" class="form-control" required name = "password" 
+    [(ngModel)]="model.password" placeholder="Password">
+  </div>
+
+  
+<div class="form-group text-center">
+    
+<button class="btn btn-success" type="submit">Registrarse</button>
+    
+<button class="btn btn-default" type="button" (click)="cancel()">Cancelar</button>
+  </div>
+  
+</form>
